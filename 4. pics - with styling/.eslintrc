@@ -1,0 +1,55 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "warn",
+    "react/state-in-constructor": "off",
+    "react/jsx-one-expression-per-line": "off",
+    /* Fixes (JSX not allowed in files with extension .tsx)
+       https://stackoverflow.com/a/60532491 */
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions":
+        [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    /* fixes Airbnb ESLint config (missing .ts/.tsx file extension)
+       https://stackoverflow.com/a/59268871 */
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    /* module import resolution (import Module from './module')
+       https://stackoverflow.com/a/55280867 */
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
