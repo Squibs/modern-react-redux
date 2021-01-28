@@ -1,38 +1,38 @@
 /* eslint-disable import/prefer-default-export */
-import { Dispatch } from 'redux';
-
 import * as actions from './actions';
 import { axiosApiRequest } from '../../utils';
 import { StreamsState } from './types';
+import { AppThunk } from '../../store';
 
 // prettier-ignore
-const createStream = (formValues: StreamsState) => async (dispatch: Dispatch): Promise<void> => {
-  const response = await axiosApiRequest.post('/streams', formValues);
+const createStream = (formValues: StreamsState): AppThunk => async (dispatch, getState) => {
+  const { userId } = getState().session.auth;
+  const response = await axiosApiRequest.post('/streams', { ...formValues, userId });
 
   // response object has a lot of information about the response, but we only care about the data that was returned from the request
   dispatch(actions.createStream(response.data));
 };
 
-const fetchStreams = () => async (dispatch: Dispatch): Promise<void> => {
+const fetchStreams = (): AppThunk => async (dispatch) => {
   const response = await axiosApiRequest.get('/streams');
 
   dispatch(actions.fetchStreams(response.data));
 };
 
-const fetchStream = (streamId: number) => async (dispatch: Dispatch): Promise<void> => {
+const fetchStream = (streamId: number): AppThunk => async (dispatch) => {
   const response = await axiosApiRequest.get(`/streams/${streamId}`);
 
   dispatch(actions.fetchStream(response.data));
 };
 
 // prettier-ignore
-const editStream = (streamId: number, formValues: StreamsState) => async (dispatch: Dispatch): Promise<void> => {
+const editStream = (streamId: number, formValues: StreamsState): AppThunk => async (dispatch) => {
   const response = await axiosApiRequest.put(`/streams/${streamId}`, formValues);
 
   dispatch(actions.editStream(response.data));
 };
 
-const deleteStream = (streamId: number) => async (dispatch: Dispatch): Promise<void> => {
+const deleteStream = (streamId: number): AppThunk => async (dispatch) => {
   await axiosApiRequest.delete(`/streams/${streamId}`);
 
   dispatch(actions.deleteStream(streamId));
