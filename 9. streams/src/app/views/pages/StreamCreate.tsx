@@ -24,7 +24,7 @@ type Props = PropsFromRedux; // & MyProps
 
 /* -------------------------------- Component ------------------------------- */
 
-const StreamCreate: React.FC<Props> = ({ createStream }) => {
+const StreamCreate: React.FC<Props> = ({ createStream }: Props) => {
   // React Form Hook
   const {
     register: registerForm,

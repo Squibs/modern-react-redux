@@ -27,7 +27,7 @@ type Props = PropsFromRedux; // & MyProps
 
 /* -------------------------------- Component ------------------------------- */
 
-const GoogleAuth: React.FC<Props> = ({ signIn, signOut, isSignedIn }) => {
+const GoogleAuth: React.FC<Props> = ({ signIn, signOut, isSignedIn }: Props) => {
   const [auth, setAuth] = useState<gapi.auth2.GoogleAuth>();
   // const [isSignedIn, setIsSignedIn] = useState<boolean | null | undefined>(null); // prettier-ignore
 
