@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import { combineReducers } from 'redux';
-import { StreamsActionTypes, StreamsActions } from './types';
+import { StreamsActionTypes, StreamsActions, StreamsState, StreamsStateAlternative } from './types';
 
-const streamsReducer = (state = {}, action: StreamsActionTypes) => {
+// prettier-ignore
+const streamsReducer = (state = <StreamsState | StreamsStateAlternative>{}, action: StreamsActionTypes) => {
   switch (action.type) {
     case StreamsActions.FETCH_STREAMS:
       return { ...state, ..._.mapKeys(action.payload, 'id') };

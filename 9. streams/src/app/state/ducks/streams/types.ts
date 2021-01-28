@@ -6,6 +6,14 @@ export type StreamsState = {
   id: number;
   title: string;
   description: string;
+  userId?: string;
+};
+
+// we are modifying what the state looks like in the reducer for fetchStreams()
+// mean-while everything else returns the state as <StreamsState>{}
+// https://stackoverflow.com/a/42216124/15020999
+export type StreamsStateAlternative = {
+  [key: number]: StreamsState;
 };
 
 /* ------------------------ streams constant strings ------------------------ */
