@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <header className="ui secondary pointing menu">
       <Link to="/" className="item">
-        Streamer
+        Streamy
       </Link>
       <div className="right menu">
         <Link to="/" className="item">
