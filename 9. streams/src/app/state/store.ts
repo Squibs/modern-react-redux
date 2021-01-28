@@ -1,6 +1,6 @@
-import { applyMiddleware, combineReducers, createStore, Store } from 'redux';
+import { Action, applyMiddleware, combineReducers, createStore, Store } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import reduxThunk from 'redux-thunk';
+import reduxThunk, { ThunkAction } from 'redux-thunk';
 
 import * as reducers from './ducks';
 
@@ -14,5 +14,8 @@ const configureStore = (): Store =>
 export default configureStore;
 
 export type AppState = ReturnType<typeof rootReducer>;
+
+// prettier-ignore
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, AppState, unknown, Action<string>>
 
 // ?debug_session=rAnDomStRinG append to end of url so that store/state is carried over page refresh
