@@ -1,4 +1,4 @@
-# Twitch clone app, moving onto redux
+# Streaming service clone app, moving onto redux
 
 - react & redux chrome dev tools
 - re-ducks folder structure is helping me understand redux better
