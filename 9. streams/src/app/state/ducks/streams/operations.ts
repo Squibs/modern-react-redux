@@ -2,7 +2,9 @@
 import * as actions from './actions';
 import { axiosApiRequest } from '../../utils';
 import { StreamsState } from './types';
-import { AppThunk } from '../../store';
+import history from '../../../routes/history';
+
+import type { AppThunk } from '../../store'; // import type to fix dependency cycle error
 
 // prettier-ignore
 const createStream = (formValues: StreamsState): AppThunk => async (dispatch, getState) => {
@@ -11,6 +13,9 @@ const createStream = (formValues: StreamsState): AppThunk => async (dispatch, ge
 
   // response object has a lot of information about the response, but we only care about the data that was returned from the request
   dispatch(actions.createStream(response.data));
+
+  // do some programmatic navigation to get the user back to the root route
+  history.push('/');
 };
 
 const fetchStreams = (): AppThunk => async (dispatch) => {
