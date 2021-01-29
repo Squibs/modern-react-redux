@@ -9,7 +9,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 
 import App from './app/views/App';
 import configureStore from './app/state/store';
-import history from './app/routes/history';
+import { history } from './app/routes';
 
 const reduxStore = configureStore();
 

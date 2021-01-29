@@ -2,7 +2,7 @@
 import * as actions from './actions';
 import { axiosApiRequest } from '../../utils';
 import { StreamsState } from './types';
-import history from '../../../routes/history';
+import { history } from '../../../routes';
 
 import type { AppThunk } from '../../store'; // import type to fix dependency cycle error
 
