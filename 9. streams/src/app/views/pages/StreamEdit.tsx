@@ -28,7 +28,10 @@ type OwnProps = RouteComponentProps<{ id: string }>; // react-router props... pa
 
 type Props = PropsFromRedux & OwnProps;
 
+/* -------------------------------- Component ------------------------------- */
+
 const StreamEdit: React.FC<Props> = ({ fetchStream, match, stream, editStream }: Props) => {
+  // fetch the stream on component mount in case of refresh
   useEffect(() => {
     fetchStream((match.params.id as unknown) as number);
   }, [fetchStream, match.params.id]);

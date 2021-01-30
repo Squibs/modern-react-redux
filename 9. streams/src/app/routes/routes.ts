@@ -24,7 +24,7 @@ const routes = [
     exact: true,
   },
   {
-    path: '/streams/delete',
+    path: '/streams/delete/:id(\\d+)',
     component: StreamDelete,
     exact: true,
   },

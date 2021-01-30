@@ -44,6 +44,7 @@ const deleteStream = (streamId: number): AppThunk => async (dispatch) => {
   await axiosApiRequest.delete(`/streams/${streamId}`);
 
   dispatch(actions.deleteStream(streamId));
+  history.push('/'); // navigate back to list of streams after deleting
 };
 
 export { createStream, fetchStreams, fetchStream, editStream, deleteStream };

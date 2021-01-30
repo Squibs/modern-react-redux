@@ -17,15 +17,15 @@
       "id": 3
     },
     {
-      "title": "Test stream title",
-      "description": "test stream description",
-      "userId": "114276285321764801680",
-      "id": 4
-    },
-    {
       "title": "Me Streaming Component Reuse!",
       "description": "This stream is about refactoring!!!",
       "id": 5
+    },
+    {
+      "title": "What ID will I be?",
+      "description": "Let's see what ID this stream will get.",
+      "userId": "114276285321764801680",
+      "id": 6
     }
   ]
 }
