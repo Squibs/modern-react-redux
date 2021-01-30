@@ -5,15 +5,24 @@ import { StreamsState } from '../../state/ducks/streams/types';
 
 /* ---------------------------------- Types --------------------------------- */
 
+// for optional props
+const defaultProps = {
+  formInitialValues: {
+    title: '',
+    description: '',
+  },
+};
+
 type OwnProps = {
   onFormSubmit: (formValues: StreamsState) => void;
+  formInitialValues?: { title: string; description: string };
 };
 
 type Props = OwnProps;
 
 /* -------------------------------- Component ------------------------------- */
 
-const StreamForm: React.FC<Props> = ({ onFormSubmit }: Props) => {
+const StreamForm: React.FC<Props> = ({ onFormSubmit, formInitialValues }: Props) => {
   // React Form Hook
   const {
     register: registerForm,
@@ -22,6 +31,10 @@ const StreamForm: React.FC<Props> = ({ onFormSubmit }: Props) => {
     errors: formErrors,
   } = useForm<StreamsState>({
     mode: 'onBlur',
+    defaultValues: {
+      title: formInitialValues?.title,
+      description: formInitialValues?.description,
+    },
   }); // can put options inside ({})
 
   const onSubmit = (formValues: StreamsState) => {
@@ -81,13 +94,15 @@ const StreamForm: React.FC<Props> = ({ onFormSubmit }: Props) => {
           'You must enter a description',
         )}
 
-        <button type="submit" className="ui button primary">
+        <button type="submit" className="ui button primary right floated">
           Submit
         </button>
       </form>
     </>
   );
 };
+
+StreamForm.defaultProps = defaultProps;
 
 export default StreamForm;
 

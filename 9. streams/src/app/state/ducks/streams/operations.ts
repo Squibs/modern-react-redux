@@ -32,9 +32,12 @@ const fetchStream = (streamId: number): AppThunk => async (dispatch) => {
 
 // prettier-ignore
 const editStream = (streamId: number, formValues: StreamsState): AppThunk => async (dispatch) => {
-  const response = await axiosApiRequest.put(`/streams/${streamId}`, formValues);
+  const response = await axiosApiRequest.patch(`/streams/${streamId}`, formValues);
+  // PUT requests update ALL properties of a record. So if you don't pass back all the same properties, some will go missing.
+  // PATCH updates SOME properties on a record.
 
   dispatch(actions.editStream(response.data));
+  history.push('/'); // navigate back to root after editing
 };
 
 const deleteStream = (streamId: number): AppThunk => async (dispatch) => {
