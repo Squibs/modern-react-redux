@@ -41,12 +41,12 @@ const StreamList: React.FC<Props> = ({
     if (stream.userId === currentUserId) {
       return (
         <div className="right floated content">
-          <button type="button" className="ui button primary">
+          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
             Edit
-          </button>
-          <button type="button" className="ui button negative">
+          </Link>
+          <Link to={`/streams/delete/${stream.id}`} className="ui button negative">
             Delete
-          </button>
+          </Link>
         </div>
       );
     }

@@ -19,7 +19,7 @@ const routes = [
     exact: true,
   },
   {
-    path: '/streams/edit/:id',
+    path: '/streams/edit/:id(\\d+)', // :id will put match.params.id in props passed to components of this route; could have multiple params here as well
     component: StreamEdit,
     exact: true,
   },

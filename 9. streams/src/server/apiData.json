@@ -17,14 +17,14 @@
       "id": 3
     },
     {
-      "title": "Unexpected Behavior",
-      "description": "Didn't expect that!",
+      "title": "Test stream title",
+      "description": "test stream description",
       "userId": "114276285321764801680",
       "id": 4
     },
     {
-      "title": "Programmatic Navigation",
-      "description": "You should not see this on the form page!!!",
+      "title": "Me Streaming Component Reuse!",
+      "description": "Watch me refactor some components.",
       "userId": "114276285321764801680",
       "id": 5
     }
