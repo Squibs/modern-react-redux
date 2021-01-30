@@ -14,3 +14,4 @@
     - moved one type to redux side, do to dependency cycle errors; ended up using it the state type for streams
 - react-hooks-form handling
 - `GET`, `POST`, `PUT`, `PATCH`, `DELETE` records
+- Modal, react portals
