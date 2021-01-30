@@ -29,7 +29,7 @@ const routes = [
     exact: true,
   },
   {
-    path: '/streams/show',
+    path: '/streams/:id(\\d+)',
     component: StreamShow,
     exact: true,
   },

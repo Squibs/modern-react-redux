@@ -45,16 +45,12 @@ const StreamEdit: React.FC<Props> = ({ fetchStream, match, stream, editStream }:
   //   return <>Loading...</>;
   // }
 
-  return (
+  return !stream ? (
+    <>Loading...</>
+  ) : (
     <>
-      {!stream ? (
-        <>Loading...</>
-      ) : (
-        <>
-          <h3>Edit a Stream</h3>
-          <StreamForm onFormSubmit={onSubmit} formInitialValues={stream} />
-        </>
-      )}
+      <h3>Edit a Stream</h3>
+      <StreamForm onFormSubmit={onSubmit} formInitialValues={stream} />
     </>
   );
 };
