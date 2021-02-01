@@ -15,3 +15,4 @@
 - react-hooks-form handling
 - `GET`, `POST`, `PUT`, `PATCH`, `DELETE` records
 - Modal, react portals
+- [project continued with rtmp server for http-flv live streams](https://github.com/Squibs/modern-react-redux/tree/rtmp/9.%20streams)
