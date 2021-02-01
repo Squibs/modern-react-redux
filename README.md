@@ -21,4 +21,5 @@ Throwing TypeScript on-top of everything a few projects in proved to be a challe
 - [Project 8 - Blog-post App with Filler Data from JSONPlaceholder](https://github.com/Squibs/modern-react-redux/tree/master/8.%20blog)
 - [Project 9 - Twitch Streams Clone - Google oAuth - Before Adding Redux](https://github.com/Squibs/modern-react-redux/tree/master/9.%20streams%20-%20before%20redux)
 - [Project 9.b - Twitch Streams Clone - Actual App Now](https://github.com/Squibs/modern-react-redux/tree/master/9.%20streams)
+- [Project 10 - Simple Translate App Using React Context System](https://github.com/Squibs/modern-react-redux/tree/master/10.%20translate)
 - ----------- [Old Projects - From the Last Time I Attempted This](https://github.com/Squibs/modern-react-redux/tree/master/_Stephen%20Grider%20Old) -----------
