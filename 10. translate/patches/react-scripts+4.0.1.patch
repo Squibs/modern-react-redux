@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index eddca1b..c29a2cb 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -751,6 +751,8 @@ module.exports = function (webpackEnv) {
+           formatter: isEnvProduction ? typescriptFormatter : undefined,
+         }),
+       new ESLintPlugin({
++        failOnError: false,
++        emitWarning: true,
+         // Plugin options
+         extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
+         formatter: require.resolve('react-dev-utils/eslintFormatter'),
