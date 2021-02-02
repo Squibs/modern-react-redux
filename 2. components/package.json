@@ -46,5 +46,8 @@
     "eslint-plugin-react-hooks": "4.0.0",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0"
+  },
+  "resolutions": {
+    "react-scripts/eslint-webpack-plugin": "2.4.1"
   }
 }
