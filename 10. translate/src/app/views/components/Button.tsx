@@ -1,19 +1,48 @@
 import React from 'react';
 
-import LanguageContext from '../../../context/LanguageContext';
+import { LanguageContext, ColorContext } from '../../../context';
 
-// Consumer element
-const Button: React.FC = () => (
-  <>
-    <button type="submit" className="ui button primary">
-      <LanguageContext.Consumer>
-        {(value) => (value === 'english' ? 'Submit' : 'Voorleggen')}
-      </LanguageContext.Consumer>
-    </button>
-  </>
-);
+// helper functions to help clean up multiple consumer elements
+const Button: React.FC = () => {
+  const renderButton = (color: string) => {
+    return (
+      <button type="submit" className={`ui button ${color}`}>
+        <LanguageContext.Consumer>
+          {(value) => (value === 'english' ? 'Submit' : 'Voorleggen')}
+        </LanguageContext.Consumer>
+      </button>
+    );
+  };
+
+  return (
+    <>
+      <ColorContext.Consumer>
+        {(color) => renderButton(color)}
+      </ColorContext.Consumer>
+    </>
+  );
+};
 
 export default Button;
+
+// multiple consumer elements
+/*
+  const Button: React.FC = () => (
+    <>
+      <ColorContext.Consumer>
+        {(color) => (
+          <button type="submit" className={`ui button ${color}`}>
+            <LanguageContext.Consumer>
+              {(value) => (value === 'english' ? 'Submit' : 'Voorleggen')}
+            </LanguageContext.Consumer>
+          </button>
+        )}
+      </ColorContext.Consumer>
+    </>
+  );
+
+  export default Button;
+*/
 
 // useContext hook
 /*

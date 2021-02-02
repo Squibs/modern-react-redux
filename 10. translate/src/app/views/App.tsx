@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 
 import React, { useState } from 'react';
-import LanguageContext from '../../context/LanguageContext';
+import { LanguageContext, ColorContext } from '../../context';
 import { UserCreate } from './pages';
 
 const App: React.FC = () => {
@@ -19,9 +19,12 @@ const App: React.FC = () => {
         <i className="flag nl" onClick={() => onLanguageChange('dutch')} />
       </div>
 
-      <LanguageContext.Provider value={language}>
-        <UserCreate />
-      </LanguageContext.Provider>
+      {/* wrapping order doesn't matter */}
+      <ColorContext.Provider value="yellow">
+        <LanguageContext.Provider value={language}>
+          <UserCreate />
+        </LanguageContext.Provider>
+      </ColorContext.Provider>
     </div>
   );
 };

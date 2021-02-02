@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
 import React, { useContext } from 'react';
-import LanguageContext from '../../../context/LanguageContext';
+import { LanguageContext } from '../../../context';
 
 const Field: React.FC = () => {
   const language = useContext(LanguageContext);
