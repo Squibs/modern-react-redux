@@ -6,6 +6,12 @@ I had originally taken some of this course a while back, and fell out of learnin
 
 Throwing TypeScript on-top of everything a few projects in proved to be a challenge, but I'm glad I did it. I plan on continuing to use typescript, as I have definitely seen how it can help; although it is still a pain to use at times.
 
+## Certificate
+
+<a href="https://www.udemy.com/certificate/UC-cef4e679-5928-478a-a0e4-0be068c57752/" target="_blank"><img src="Modern-React-Redux-Certificate.jpg" height="300" alt="Screenshot of my portfolio page."/></a>
+
+[Link to My Certificate (~52.5 Total Hours of Course Material)](https://www.udemy.com/certificate/UC-cef4e679-5928-478a-a0e4-0be068c57752/)
+
 ## Projects
 
 - [Project 1 - Some JSX](https://github.com/Squibs/modern-react-redux/tree/master/1.%20jsx)
