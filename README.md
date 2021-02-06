@@ -1,4 +1,4 @@
-# Learning React and Redux with Stephen Grider's _Modern React With Redux_, and I Threw Typescript in for Myself as Well.
+# Learning React and Redux with Stephen Grider's *Modern React With Redux*, and I Threw Typescript in for Myself as Well.
 
 I have notes inside each project folder of what I think was most important for me to learn. I wish I had started this repo earlier while going through the lessons / projects provided by Stephen Grider's Udemy course. It would have allowed me to record better notes for myself, but as it is I am already quite happy, especially with how project 9 is going/went.
 
