@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import Convert from './Convert';
+import FakeConvert from './FakeConvert';
 
 const options = [
   {
@@ -48,7 +49,7 @@ const Translate = (): JSX.Element => {
       />
       <hr />
       <h3 className="ui header">Output</h3>
-      <Convert text={text} language={language} />
+      <FakeConvert text={text} language={language} />
     </div>
   );
 };
