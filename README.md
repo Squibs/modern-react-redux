@@ -4,7 +4,7 @@ I have notes inside each project folder of what I think was most important for m
 
 I had originally taken some of this course a while back, and fell out of learning React and Redux. It was a lot to learn at the time, and I needed time to grow/learn before coming back. The lessons offered in Stephen's course changed a lot from the first time I went through and this second go at it went so much better than my previous attempt.
 
-Throwing TypeScript on-top of everything a few projects in proved to be a challenge, but I'm glad I did it. I plan on continuing to use typescript, as I have definitely seen how it can help; although it is still a pain to use at times.
+Throwing TypeScript on-top of everything a few projects in proved to be a challenge, but I'm glad I did it. I plan on continuing to use typescript, as I have definitely seen how it can help; although it is still a pain to use at times. 
 
 ## Certificate
 
